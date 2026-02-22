@@ -1,0 +1,59 @@
+# DB
+lingobox.db
+
+# 환경 변수 및 비밀 키
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# AWS 자격 증명 (로컬 테스트용)
+.aws/
+credentials
+
+# 파이썬 컴파일 파일 및 캐시
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.python-version
+
+# 가상환경 (반드시 제외!)
+venv/
+.venv/
+env/
+bin/
+lib/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.installed.cfg
+parts/
+sdist/
+var/
+wheels/
+
+# 의존성 폴더
+node_modules/
+
+# Expo 빌드 및 캐시
+.expo/
+dist/
+web-build/
+
+# 로그 파일
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS 특성 파일
+.DS_Store
+Thumbs.db
+
+# 에디터 설정
+.vscode/
+.idea/
+*.swp
+*.swo

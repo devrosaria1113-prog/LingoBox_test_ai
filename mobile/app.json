@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "LingoBox",
+    "slug": "lingobox",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "lingobox",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lingobox.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "사진을 촬영하여 업로드하기 위해 카메라 접근 권한이 필요합니다.",
+        "NSPhotoLibraryUsageDescription": "갤러리에서 사진을 선택하여 업로드하기 위해 사진 라이브러리 접근 권한이 필요합니다.",
+        "NSPhotoLibraryAddUsageDescription": "촬영한 사진을 갤러리에 저장하기 위해 접근 권한이 필요합니다."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.lingobox.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "사진 촬영을 위해 카메라 접근 권한이 필요합니다."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "갤러리에서 사진을 선택하기 위해 접근 권한이 필요합니다."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "갤러리에 접근하기 위한 권한이 필요합니다.",
+          "savePhotosPermission": "사진을 갤러리에 저장하기 위한 권한이 필요합니다.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
